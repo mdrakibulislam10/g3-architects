@@ -172,6 +172,66 @@
     left: -110px;
 }
 
+.small-font-btn {
+    font-size: 25px;
+}
+
+/* Some Facts section styles */
+
+/* animation */
+@keyframes facts-card {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        transform: scale(1.1, 1.1);
+        background-color: pink;
+    }
+}
+
+.facts-detail {
+    margin-left: 140px;
+}
+
+.facts-cards {
+    display: grid;
+    gap: 100px;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 68px 200px 130px;
+}
+
+.facts-cards .facts-card {
+    border-radius: 8px;
+    padding: 45px 36px 59px;
+    border: 1px solid #FF900E;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.facts-card:hover {
+    animation: facts-card 0.8s linear 1 forwards;
+}
+
+.facts-card .facts-card-title {
+    font-weight: 600;
+    font-size: 36px;
+    color: #424242;
+    margin: 10px 5px;
+}
+
+.facts-card .facts-card-description {
+    font-weight: 600;
+    font-size: 16px;
+    color: #727272;
+}
+
 /* our works and architecture section styles */
 .works-title {
     border: 0;
@@ -217,62 +277,6 @@
     font-size: 1.1em;
 }
 
-/* Some Facts section styles */
-
-/* animation */
-@keyframes facts-card {
-    from {
-        background-color: transparent;
-    }
-
-    to {
-        transform: scale(1.1, 1.1);
-        background-color: pink;
-    }
-}
-
-.facts-detail {
-    margin-left: 140px;
-}
-
-.facts-cards {
-    display: grid;
-    gap: 100px;
-    justify-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 68px 200px 180px;
-}
-
-.facts-cards .facts-card {
-    border-radius: 8px;
-    padding: 45px 36px 59px;
-    border: 1px solid #FF900E;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.facts-card:hover {
-    animation: facts-card 0.8s linear 1 forwards;
-}
-
-.facts-card .facts-card-title {
-    font-weight: 600;
-    font-size: 36px;
-    color: #424242;
-    margin: 10px 5px;
-}
-
-.facts-card .facts-card-description {
-    font-weight: 600;
-    font-size: 16px;
-    color: #727272;
-}
-
 /* Our Sponsors section styes */
 .sponsors-container {
     text-align: center;
@@ -283,6 +287,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 150px;
+    align-items: center;
     justify-items: center;
     padding: 0 45px;
     margin-top: 18px;
@@ -313,9 +318,10 @@ footer .footer-text {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 5px;
 }
 
-/*............................................................................................................................
+/*........................................................
 media query
 ................*/
 
@@ -332,6 +338,7 @@ media query
 
     .nav .nav-title {
         font-size: 2em;
+        margin-top: 10px;
     }
 
     .nav ul {
@@ -381,20 +388,15 @@ media query
     }
 
     .experience-btn {
-        padding: 22px 18px;
+        padding: 20px;
         font-weight: 500;
         bottom: -50px;
         left: -5px;
+        font-size: 25px;
     }
 
-    .works-title,
-    .section-title {
-        font-size: 36px;
-    }
-
-    .works {
-        grid-template-columns: repeat(1, 1fr);
-        margin: 25px 0;
+    .small-font-btn {
+        font-size: 18px;
     }
 
     .facts-detail {
@@ -409,6 +411,20 @@ media query
 
     .facts-cards .facts-card {
         padding: 25px 26px 29px;
+    }
+
+    .works-title,
+    .section-title {
+        font-size: 36px;
+    }
+
+    .works {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 25px 0;
+    }
+
+    .sponsors-container {
+        margin: 0 12px;
     }
 
     .sponsors {
@@ -455,11 +471,6 @@ media query
         left: -8px;
     }
 
-    .works {
-        grid-template-columns: repeat(2, 1fr);
-        margin: 25px 0 10px;
-    }
-
     .facts-cards {
         grid-template-columns: repeat(2, 1fr);
         margin: 0px 50px 30px;
@@ -467,6 +478,11 @@ media query
 
     .facts-cards .facts-card {
         padding: 25px 26px 29px;
+    }
+
+    .works {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 25px 0 10px;
     }
 
     .sponsors {
