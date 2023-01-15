@@ -288,6 +288,29 @@
 
 .sponsors img {
     filter: grayscale(100%);
+    width: 100%;
+}
+
+/* footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 130px 0 216px;
+}
+
+footer .footer-text {
+    color: #424242;
+    font-weight: 400;
+    font-size: 20px;
+    width: 90%;
+    height: 100px;
+    background: #FFF4E7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /*............................................................................................................................
@@ -390,6 +413,14 @@ media query
         gap: 60px;
         padding: 0 15px 30px 15px;
     }
+
+    .sponsors img {
+        width: 40%;
+    }
+
+    footer {
+        margin: 0 0 36px;
+    }
 }
 
 
@@ -441,5 +472,13 @@ media query
         grid-template-columns: repeat(2, 1fr);
         gap: 60px;
         padding: 30px 15px;
+    }
+
+    .sponsors img {
+        width: 50%;
+    }
+
+    footer {
+        margin: 0 0 36px;
     }
 }
